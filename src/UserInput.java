@@ -5,6 +5,8 @@ public class UserInput {
 
         Scanner sc = new Scanner(System.in);
 
+        String result;
+
         System.out.print("Enter your name: ");
         String name = sc.nextLine();
 
@@ -14,10 +16,18 @@ public class UserInput {
         System.out.println("Enter your GPA: ");
         Double gpa = sc.nextDouble();
 
-        System.out.println("Enter p if passed and f if failed: ");
+        System.out.println("Enter true if passed, else fail: ");
+        Boolean isPass = sc.nextBoolean();
+
+        if(isPass){
+            result = "passed";
+        }
+        else {
+            result = "failed";
+        }
 
 
-        System.out.println("Hello "+ name + ", "+ age + " years old, who's gpa is " + gpa + ".");
+        System.out.println("Hello "+ name + ", "+ age + " years old, who " + result + " with a gpa of " + gpa + ".");
 
         sc.close();
 
