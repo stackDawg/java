@@ -13,7 +13,7 @@ public class UserInput {
         System.out.print("Enter your age: ");
         Integer age = sc.nextInt();
 
-        System.out.println("Enter your GPA: ");
+        System.out.print("Enter your GPA: ");
         Double gpa = sc.nextDouble();
 
         System.out.println("Enter true if passed, else fail: ");
